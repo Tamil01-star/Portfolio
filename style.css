@@ -1227,6 +1227,7 @@ a {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  will-change: transform;
 }
 .cert-flip-card:hover .cert-inner {
   transform: rotateY(180deg);
@@ -1242,9 +1243,10 @@ a {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  will-change: transform;
 }
 .cert-back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateZ(0);
   justify-content: space-between;
 }
 .cert-logo {
