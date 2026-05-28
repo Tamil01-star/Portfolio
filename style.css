@@ -622,17 +622,43 @@ a {
   height: 100%;
   border-radius: 25px;
   padding: 6px;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  box-shadow: 0 0 35px rgba(0, 245, 255, 0.35);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary), #9d4edd);
+  background-size: 200% 200%;
+  box-shadow: 0 15px 45px rgba(0, 245, 255, 0.3);
   z-index: 5;
+  animation: float-profile 6s ease-in-out infinite, gradient-shift 5s ease infinite;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  overflow: hidden;
 }
+
+.profile-photo-frame:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 25px 55px rgba(0, 245, 255, 0.5);
+}
+
 .profile-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  border-radius: inherit;
+  border-radius: 20px;
   border: 4px solid var(--bg-base);
+  transition: transform 0.5s ease;
+}
+
+.profile-photo-frame:hover .profile-photo {
+  transform: scale(1.05);
+}
+
+@keyframes float-profile {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 .photo-glow-ring {
   position: absolute;
