@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tamilselvan B — Portfolio | ECE Engineer & Embedded Systems Enthusiast</title>
+  <meta name="description" content="Portfolio of Tamilselvan B — ECE Student, Embedded Systems Enthusiast, and aspiring tech innovator from Salem, Tamil Nadu, India." />
+  <meta property="og:title" content="Tamilselvan B — Portfolio" />
+  <meta property="og:description" content="ECE Student passionate about Embedded Systems, VLSI Design & IoT Applications" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-content">
+      <div class="loading-initials">
+        <span class="init-t">T</span><span class="init-b">B</span>
+      </div>
+      <div class="loading-bar-wrap">
+        <div class="loading-bar" id="loadingBar"></div>
+      </div>
+      <p class="loading-text">Initializing Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-box">TB</span>
+        <div class="status-badge">🟢 Open to Opportunities</div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+        <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+        <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+        <li><a href="#education" class="nav-link" id="nav-education">Education</a></li>
+        <li><a href="#workshops" class="nav-link" id="nav-workshops">Workshops</a></li>
+        <li><a href="#certifications" class="nav-link" id="nav-certifications">Certifications</a></li>
+        <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+        <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Vertical Navigation Dots -->
+  <div class="nav-dots" id="navDots">
+    <a href="#home" class="dot active" title="Home"></a>
+    <a href="#about" class="dot" title="About"></a>
+    <a href="#skills" class="dot" title="Skills"></a>
+    <a href="#education" class="dot" title="Education"></a>
+    <a href="#workshops" class="dot" title="Workshops"></a>
+    <a href="#certifications" class="dot" title="Certifications"></a>
+    <a href="#projects" class="dot" title="Projects"></a>
+    <a href="#contact" class="dot" title="Contact"></a>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero-section">
+    <canvas id="particleCanvas"></canvas>
+    <div class="floating-icons">
+      <span class="fi fi-1">&lt;/&gt;</span>
+      <span class="fi fi-2">🤖</span>
+      <span class="fi fi-3">⚡</span>
+      <span class="fi fi-4">💡</span>
+      <span class="fi fi-5">🔗</span>
+      <span class="fi fi-6">⚙️</span>
+    </div>
+
+    <div class="hero-container">
+      <!-- Left: Text -->
+      <div class="hero-text">
+        <div class="hero-greeting">Hello, I'm</div>
+        <h1 class="hero-name gradient-text">TAMILSELVAN B</h1>
+        <p class="hero-tagline">Turning Ideas Into Digital Realities 🚀</p>
+        <div class="hero-typewriter">
+          <span class="typewriter-prefix">I am a </span>
+          <span class="typewriter-text" id="typewriter"></span>
+          <span class="typewriter-cursor">|</span>
+        </div>
+        <p class="hero-bio">
+          ECE Student | Passionate about building meaningful tech solutions<br/>
+          that solve real-world problems through Embedded Systems & IoT.
+        </p>
+        <div class="location-badge">📍 Salem, Tamil Nadu, India</div>
+
+        <!-- Stat Counters -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" data-target="15">0</span>
+            <span class="stat-label">🏆 Certifications</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="4">0</span>
+            <span class="stat-label">🛠️ Projects Built</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="6">0</span>
+            <span class="stat-label">📚 Workshops</span>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary" id="viewWorkBtn">View My Work</a>
+          <a href="Resume.pdf" target="_blank" class="btn-secondary" id="downloadCvBtn">📄 View Resume</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="hero-socials">
+          <a href="https://github.com/Tamil01-star" target="_blank" class="social-icon" title="GitHub" id="githubLink">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/tamilselvan-b-b1173733a" target="_blank" class="social-icon" title="LinkedIn" id="linkedinLink">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:mr2007tamilselvan@gmail.com" class="social-icon" title="Email" id="emailLink">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          </a>
+          <a href="tel:+919080985249" class="social-icon" title="Phone" id="phoneLink">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Photo with orbit -->
+      <div class="hero-photo-wrap">
+        <div class="orbit-container">
+          <div class="orbit orbit-outer">
+            <div class="orbit-icon o1">🐍</div>
+            <div class="orbit-icon o2">⚡</div>
+            <div class="orbit-icon o3">🔬</div>
+            <div class="orbit-icon o4">🤖</div>
+            <div class="orbit-icon o5">⚙️</div>
+          </div>
+          <div class="orbit orbit-inner">
+            <div class="orbit-icon oi1">💡</div>
+            <div class="orbit-icon oi2">🔗</div>
+            <div class="orbit-icon oi3">📡</div>
+          </div>
+          <div class="profile-photo-frame">
+            <img src="profile.jpg" alt="Tamilselvan B" class="profile-photo" />
+            <div class="photo-glow-ring"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+      <span>Scroll to Explore</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="section about-section">
+    <div class="section-bg-mesh"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-line"></div>
+        <h2 class="section-title gradient-text">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Photo + Badge -->
+        <div class="about-left reveal-left">
+          <div class="about-hexframe">
+            <div class="hex-wrap">
+              <img src="profile.jpg" alt="Tamilselvan B" class="about-photo" />
+            </div>
+          </div>
+          <div class="about-badge-card glass-card">
+            <div class="badge-row">🎓 <span>Currently Studying</span></div>
+            <div class="badge-row">🏛 <span>Anna University</span></div>
+            <div class="badge-row">📖 <span>B.E. — Electronics & Communication Engineering</span></div>
+            <div class="badge-row">📅 <span>2024–2028 (3rd Semester)</span></div>
+            <div class="badge-row">⭐ <span>CGPA: 8.33</span></div>
+          </div>
+        </div>
+
+        <!-- Right: Bio -->
+        <div class="about-right reveal-right">
+          <h3 class="about-who">Who Am I?</h3>
+          <div class="about-bio">
+            <p>I am a passionate <span class="highlight">Electronics & Communication Engineering</span> student from <span class="highlight">Salem, Tamil Nadu</span>, currently pursuing my B.E. degree at Anna University. I have a deep love for technology, innovation, and building solutions that create real-world impact.</p>
+            <p>My journey in tech has led me through <span class="highlight">Embedded Systems</span>, <span class="highlight">VLSI Design</span>, and <span class="highlight">IoT Applications</span>. I actively participate in workshops, earn certifications, and work on projects that challenge my creativity and engineering mindset.</p>
+            <p>Beyond academics, I enjoy exploring new technologies, solving hardware and software problems, and collaborating with people who share the same drive for <span class="highlight">innovation</span>.</p>
+          </div>
+
+          <!-- Trait Cards -->
+          <div class="trait-grid">
+            <div class="trait-card glass-card">🎯 <span>Goal-Driven</span></div>
+            <div class="trait-card glass-card">🤝 <span>Team Player</span></div>
+            <div class="trait-card glass-card">🔍 <span>Detail-Oriented</span></div>
+            <div class="trait-card glass-card">🚀 <span>Fast Learner</span></div>
+          </div>
+
+          <!-- Currently Learning -->
+          <div class="learning-section">
+            <h4 class="learning-title">🔥 Currently Learning</h4>
+            <div class="learning-cards">
+              <div class="learn-card glass-card">
+                <span class="learn-icon">🐍</span>
+                <span class="learn-name">Python</span>
+                <div class="learn-bar"><div class="learn-fill" data-width="70"></div></div>
+                <span class="learn-pct">70%</span>
+              </div>
+              <div class="learn-card glass-card">
+                <span class="learn-icon">⚡</span>
+                <span class="learn-name">Embedded C</span>
+                <div class="learn-bar"><div class="learn-fill" data-width="65"></div></div>
+                <span class="learn-pct">65%</span>
+              </div>
+              <div class="learn-card glass-card">
+                <span class="learn-icon">🔬</span>
+                <span class="learn-name">VLSI Design</span>
+                <div class="learn-bar"><div class="learn-fill" data-width="55"></div></div>
+                <span class="learn-pct">55%</span>
+              </div>
+              <div class="learn-card glass-card">
+                <span class="learn-icon">📡</span>
+                <span class="learn-name">IoT & ESP32</span>
+                <div class="learn-bar"><div class="learn-fill" data-width="60"></div></div>
+                <span class="learn-pct">60%</span>
+              </div>
+              <div class="learn-card glass-card">
+                <span class="learn-icon">🖥️</span>
+                <span class="learn-name">Arduino</span>
+                <div class="learn-bar"><div class="learn-fill" data-width="75"></div></div>
+                <span class="learn-pct">75%</span>
+              </div>
+              <div class="learn-card glass-card">
+                <span class="learn-icon">⚙️</span>
+                <span class="learn-name">Circuit Design</span>
+                <div class="learn-bar"><div class="learn-fill" data-width="50"></div></div>
+                <span class="learn-pct">50%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-line"></div>
+        <h2 class="section-title gradient-text">Technical Skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="skill-tabs">
+        <button class="skill-tab active" data-filter="all" id="tabAll">All</button>
+        <button class="skill-tab" data-filter="programming" id="tabProg">Programming</button>
+        <button class="skill-tab" data-filter="hardware" id="tabHardware">Hardware</button>
+        <button class="skill-tab" data-filter="tools" id="tabTools">Tools</button>
+      </div>
+
+      <!-- Skill Badges Grid -->
+      <div class="skills-grid" id="skillsGrid">
+        <div class="skill-badge glass-card" data-category="programming">
+          <span class="skill-icon">🐍</span>
+          <span class="skill-name">Python</span>
+        </div>
+        <div class="skill-badge glass-card" data-category="programming">
+          <span class="skill-icon">💻</span>
+          <span class="skill-name">C Programming</span>
+        </div>
+        <div class="skill-badge glass-card" data-category="hardware">
+          <span class="skill-icon">🔬</span>
+          <span class="skill-name">VLSI Design</span>
+        </div>
+        <div class="skill-badge glass-card" data-category="hardware">
+          <span class="skill-icon">🤖</span>
+          <span class="skill-name">Embedded Systems</span>
+        </div>
+        <div class="skill-badge glass-card" data-category="hardware">
+          <span class="skill-icon">📡</span>
+          <span class="skill-name">IoT Applications</span>
+        </div>
+        <div class="skill-badge glass-card" data-category="hardware">
+          <span class="skill-icon">⚡</span>
+          <span class="skill-name">Arduino</span>
+        </div>
+        <div class="skill-badge glass-card" data-category="hardware">
+          <span class="skill-icon">📟</span>
+          <span class="skill-name">ESP32</span>
+        </div>
+        <div class="skill-badge glass-card" data-category="hardware">
+          <span class="skill-icon">🔋</span>
+          <span class="skill-name">Power Electronics</span>
+        </div>
+        <div class="skill-badge glass-card" data-category="tools">
+          <span class="skill-icon">🛠️</span>
+          <span class="skill-name">EDA Tools</span>
+        </div>
+        <div class="skill-badge glass-card" data-category="tools">
+          <span class="skill-icon">📐</span>
+          <span class="skill-name">Circuit Design</span>
+        </div>
+        <div class="skill-badge glass-card" data-category="tools">
+          <span class="skill-icon">💡</span>
+          <span class="skill-name">Proteus</span>
+        </div>
+        <div class="skill-badge glass-card" data-category="tools">
+          <span class="skill-icon">🐙</span>
+          <span class="skill-name">Git & GitHub</span>
+        </div>
+      </div>
+
+      <!-- Skill Bars -->
+      <div class="skill-bars-section reveal-up">
+        <h3 class="bars-title">Proficiency Levels</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Python</span><span>70%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>C Programming</span><span>75%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Embedded Systems</span><span>65%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>VLSI Design</span><span>55%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="55"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>IoT / ESP32</span><span>60%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="60"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Arduino</span><span>75%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION SECTION ===== -->
+  <section id="education" class="section education-section">
+    <div class="section-bg-mesh"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-line"></div>
+        <h2 class="section-title gradient-text">Education</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline">
+        <!-- B.E. -->
+        <div class="timeline-item left reveal-left">
+          <div class="timeline-dot">🎓</div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <div class="tl-icon">🏛️</div>
+              <div>
+                <h3 class="tl-degree">B.E. — Electronics & Communication Engineering</h3>
+                <p class="tl-inst">Anna University, Salem</p>
+              </div>
+            </div>
+            <div class="tl-meta">
+              <span class="tl-year">📅 2024 – 2028</span>
+              <span class="tl-badge pursuing">🟢 Currently Pursuing</span>
+            </div>
+            <div class="tl-grade">⭐ CGPA: 8.33 (3rd Semester)</div>
+            <div class="tl-subjects">
+              <strong>Key Subjects:</strong> Digital Electronics, Circuit Theory, Signals & Systems, Embedded Systems, VLSI Design, Microprocessors
+            </div>
+          </div>
+        </div>
+
+        <!-- HSC -->
+        <div class="timeline-item right reveal-right">
+          <div class="timeline-dot">📚</div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <div class="tl-icon">🏫</div>
+              <div>
+                <h3 class="tl-degree">Higher Secondary Certificate (HSC)</h3>
+                <p class="tl-inst">State Board, Salem</p>
+              </div>
+            </div>
+            <div class="tl-meta">
+              <span class="tl-year">📅 2023 – 2024</span>
+              <span class="tl-badge completed">✅ Completed</span>
+            </div>
+            <div class="tl-grade">⭐ Percentage: 88%</div>
+            <div class="tl-subjects">
+              <strong>Stream:</strong> Computer Science / Mathematics Group
+            </div>
+          </div>
+        </div>
+
+        <!-- SSLC -->
+        <div class="timeline-item left reveal-left">
+          <div class="timeline-dot">📖</div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <div class="tl-icon">🏫</div>
+              <div>
+                <h3 class="tl-degree">Secondary School Leaving Certificate (SSLC)</h3>
+                <p class="tl-inst">State Board, Salem</p>
+              </div>
+            </div>
+            <div class="tl-meta">
+              <span class="tl-year">📅 2021 – 2022</span>
+              <span class="tl-badge completed">✅ Completed</span>
+            </div>
+            <div class="tl-grade">⭐ Percentage: 84%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORKSHOPS SECTION ===== -->
+  <section id="workshops" class="section workshops-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-line"></div>
+        <h2 class="section-title gradient-text">Workshops & Events</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Continuously growing through hands-on learning experiences</p>
+      </div>
+
+      <div class="workshop-carousel">
+        <button class="carousel-btn prev-btn" id="workshopPrev" aria-label="Previous">&#8592;</button>
+        <div class="workshop-track-wrap">
+          <div class="workshop-track" id="workshopTrack">
+
+            <div class="workshop-card glass-card">
+              <div class="ws-icon">⚙️</div>
+              <div class="ws-category">Hardware / EDA</div>
+              <h3 class="ws-name">Electronic Design Automation (EDA) Tools</h3>
+              <p class="ws-org">📍 Organized by College / Institution</p>
+              <div class="ws-meta">
+                <span>🏢 Offline</span>
+                <span>⏱ Workshop</span>
+              </div>
+              <p class="ws-desc">Hands-on experience with EDA tools used in VLSI and circuit design workflows. Covered simulation, synthesis, and layout methodologies.</p>
+              <div class="ws-cert-badge">🏆 Certificate Earned</div>
+            </div>
+
+            <div class="workshop-card glass-card">
+              <div class="ws-icon">📡</div>
+              <div class="ws-category">IoT / Hardware</div>
+              <h3 class="ws-name">IoT Made Easy With ESP32</h3>
+              <p class="ws-org">📍 Organized by Tech Community</p>
+              <div class="ws-meta">
+                <span>🏢 Offline / Online</span>
+                <span>⏱ Workshop</span>
+              </div>
+              <p class="ws-desc">Explored ESP32 microcontroller programming for IoT applications. Built practical wireless sensor projects and learned cloud connectivity.</p>
+              <div class="ws-cert-badge">🏆 Certificate Earned</div>
+            </div>
+
+            <div class="workshop-card glass-card">
+              <div class="ws-icon">🤖</div>
+              <div class="ws-category">AI / Design</div>
+              <h3 class="ws-name">NPTEL — Design Thinking: A Primer</h3>
+              <p class="ws-org">📍 NPTEL (IIT)</p>
+              <div class="ws-meta">
+                <span>💻 Online</span>
+                <span>⏱ Course</span>
+              </div>
+              <p class="ws-desc">Learned the principles of design thinking including empathy, ideation, prototyping, and testing for problem-solving in engineering contexts.</p>
+              <div class="ws-cert-badge">🏆 Certificate Earned</div>
+            </div>
+
+            <div class="workshop-card glass-card">
+              <div class="ws-icon">🔬</div>
+              <div class="ws-category">VLSI / Hardware</div>
+              <h3 class="ws-name">Infosys Springboard — VLSI Design</h3>
+              <p class="ws-org">📍 Infosys Springboard</p>
+              <div class="ws-meta">
+                <span>💻 Online</span>
+                <span>⏱ Online Course</span>
+              </div>
+              <p class="ws-desc">Comprehensive online course covering VLSI design fundamentals, digital circuit design, logic synthesis, and semiconductor basics.</p>
+              <div class="ws-cert-badge">🏆 Certificate Earned</div>
+            </div>
+
+            <div class="workshop-card glass-card">
+              <div class="ws-icon">🌐</div>
+              <div class="ws-category">Web / Arduino</div>
+              <h3 class="ws-name">Arduino & React Development Workshop</h3>
+              <p class="ws-org">📍 Technical Institute</p>
+              <div class="ws-meta">
+                <span>🏢 Offline</span>
+                <span>⏱ Workshop</span>
+              </div>
+              <p class="ws-desc">Integrated Arduino hardware with React-based web interfaces. Built interactive dashboards for IoT sensor data visualization.</p>
+              <div class="ws-cert-badge">🏆 Certificate Earned</div>
+            </div>
+
+            <div class="workshop-card glass-card">
+              <div class="ws-icon">📊</div>
+              <div class="ws-category">Data / Analytics</div>
+              <h3 class="ws-name">Data Visualization Workshop</h3>
+              <p class="ws-org">📍 Tech Community</p>
+              <div class="ws-meta">
+                <span>💻 Online/Offline</span>
+                <span>⏱ Workshop</span>
+              </div>
+              <p class="ws-desc">Learned data visualization techniques, chart types, and tools to effectively present complex engineering data and insights.</p>
+              <div class="ws-cert-badge">🏆 Certificate Earned</div>
+            </div>
+
+          </div>
+        </div>
+        <button class="carousel-btn next-btn" id="workshopNext" aria-label="Next">&#8594;</button>
+      </div>
+      <div class="carousel-dots" id="workshopDots"></div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS SECTION ===== -->
+  <section id="certifications" class="section certs-section">
+    <div class="section-bg-mesh"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-line"></div>
+        <h2 class="section-title gradient-text">My Certifications</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Verified credentials that validate my skills</p>
+      </div>
+
+      <div class="certs-grid">
+
+        <!-- Cert 1 -->
+        <div class="cert-flip-card reveal-up">
+          <div class="cert-inner">
+            <div class="cert-front glass-card">
+              <div class="cert-logo">⚙️</div>
+              <h3 class="cert-title">EDA Tools Workshop</h3>
+              <p class="cert-issuer">College / Institution</p>
+              <p class="cert-date">2024</p>
+            </div>
+            <div class="cert-back glass-card">
+              <h4>Skills Covered</h4>
+              <ul>
+                <li>Electronic Design Automation</li>
+                <li>VLSI Circuit Simulation</li>
+                <li>Layout & Synthesis</li>
+              </ul>
+              <a href="Certificates/EDA_WORKSHOP_CERT.pdf" target="_blank" class="cert-verify-btn">📄 View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="cert-flip-card reveal-up">
+          <div class="cert-inner">
+            <div class="cert-front glass-card">
+              <div class="cert-logo">📡</div>
+              <h3 class="cert-title">IoT Made Easy With ESP32</h3>
+              <p class="cert-issuer">Tech Workshop</p>
+              <p class="cert-date">2024</p>
+            </div>
+            <div class="cert-back glass-card">
+              <h4>Skills Covered</h4>
+              <ul>
+                <li>ESP32 Programming</li>
+                <li>IoT Connectivity</li>
+                <li>Wireless Sensor Networks</li>
+              </ul>
+              <a href="Certificates/iot_ESP32..pdf" target="_blank" class="cert-verify-btn">📄 View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="cert-flip-card reveal-up">
+          <div class="cert-inner">
+            <div class="cert-front glass-card">
+              <div class="cert-logo">🎓</div>
+              <h3 class="cert-title">NPTEL — Design Thinking</h3>
+              <p class="cert-issuer">NPTEL / IIT</p>
+              <p class="cert-date">2024</p>
+            </div>
+            <div class="cert-back glass-card">
+              <h4>Skills Covered</h4>
+              <ul>
+                <li>Design Thinking Process</li>
+                <li>Problem Solving</li>
+                <li>Prototype & Testing</li>
+              </ul>
+              <a href="Certificates/NPTEL_CERT..pdf" target="_blank" class="cert-verify-btn">📄 View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 4 -->
+        <div class="cert-flip-card reveal-up">
+          <div class="cert-inner">
+            <div class="cert-front glass-card">
+              <div class="cert-logo">🔬</div>
+              <h3 class="cert-title">VLSI Design</h3>
+              <p class="cert-issuer">Infosys Springboard</p>
+              <p class="cert-date">2024</p>
+            </div>
+            <div class="cert-back glass-card">
+              <h4>Skills Covered</h4>
+              <ul>
+                <li>VLSI Fundamentals</li>
+                <li>Digital Logic Design</li>
+                <li>Semiconductor Basics</li>
+              </ul>
+              <a href="Certificates/CERT_VLSI.pdf" target="_blank" class="cert-verify-btn">📄 View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 5 -->
+        <div class="cert-flip-card reveal-up">
+          <div class="cert-inner">
+            <div class="cert-front glass-card">
+              <div class="cert-logo">🌐</div>
+              <h3 class="cert-title">Arduino & React Workshop</h3>
+              <p class="cert-issuer">Technical Institute</p>
+              <p class="cert-date">2024</p>
+            </div>
+            <div class="cert-back glass-card">
+              <h4>Skills Covered</h4>
+              <ul>
+                <li>Arduino Programming</li>
+                <li>React Integration</li>
+                <li>IoT Dashboards</li>
+              </ul>
+              <a href="Certificates/Ardino React_CERT.pdf" target="_blank" class="cert-verify-btn">📄 View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 6 -->
+        <div class="cert-flip-card reveal-up">
+          <div class="cert-inner">
+            <div class="cert-front glass-card">
+              <div class="cert-logo">📊</div>
+              <h3 class="cert-title">Data Visualization</h3>
+              <p class="cert-issuer">Online Platform</p>
+              <p class="cert-date">2024</p>
+            </div>
+            <div class="cert-back glass-card">
+              <h4>Skills Covered</h4>
+              <ul>
+                <li>Data Visualization</li>
+                <li>Chart Design</li>
+                <li>Analytics Tools</li>
+              </ul>
+              <a href="Certificates/CERT_DATA VISU.pdf" target="_blank" class="cert-verify-btn">📄 View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 7 -->
+        <div class="cert-flip-card reveal-up">
+          <div class="cert-inner">
+            <div class="cert-front glass-card">
+              <div class="cert-logo">💻</div>
+              <h3 class="cert-title">Python Programming</h3>
+              <p class="cert-issuer">Online Course</p>
+              <p class="cert-date">2024</p>
+            </div>
+            <div class="cert-back glass-card">
+              <h4>Skills Covered</h4>
+              <ul>
+                <li>Python Basics & Lists</li>
+                <li>Data Structures</li>
+                <li>Programming Logic</li>
+              </ul>
+              <a href="Certificates/CERT_PYTHON-LIST.pdf" target="_blank" class="cert-verify-btn">📄 View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 8 -->
+        <div class="cert-flip-card reveal-up">
+          <div class="cert-inner">
+            <div class="cert-front glass-card">
+              <div class="cert-logo">🗄️</div>
+              <h3 class="cert-title">Index & Query</h3>
+              <p class="cert-issuer">Database Course</p>
+              <p class="cert-date">2024</p>
+            </div>
+            <div class="cert-back glass-card">
+              <h4>Skills Covered</h4>
+              <ul>
+                <li>Database Indexing</li>
+                <li>SQL Queries</li>
+                <li>Query Optimization</li>
+              </ul>
+              <a href="Certificates/CERT_INDEX&QUARY.pdf" target="_blank" class="cert-verify-btn">📄 View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 9 -->
+        <div class="cert-flip-card reveal-up">
+          <div class="cert-inner">
+            <div class="cert-front glass-card">
+              <div class="cert-logo">🔢</div>
+              <h3 class="cert-title">Introduction to Algorithms</h3>
+              <p class="cert-issuer">Online Platform</p>
+              <p class="cert-date">2024</p>
+            </div>
+            <div class="cert-back glass-card">
+              <h4>Skills Covered</h4>
+              <ul>
+                <li>Algorithm Design</li>
+                <li>Data Structures</li>
+                <li>Problem Solving</li>
+              </ul>
+              <a href="Certificates/CERT_INT-ALG.pdf" target="_blank" class="cert-verify-btn">📄 View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 10 -->
+        <div class="cert-flip-card reveal-up">
+          <div class="cert-inner">
+            <div class="cert-front glass-card">
+              <div class="cert-logo">📱</div>
+              <h3 class="cert-title">QR Code Development</h3>
+              <p class="cert-issuer">Tech Course</p>
+              <p class="cert-date">2024</p>
+            </div>
+            <div class="cert-back glass-card">
+              <h4>Skills Covered</h4>
+              <ul>
+                <li>QR Code Generation</li>
+                <li>Encoding Standards</li>
+                <li>Practical Applications</li>
+              </ul>
+              <a href="Certificates/CERT_QR-CODE.pdf" target="_blank" class="cert-verify-btn">📄 View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 11 -->
+        <div class="cert-flip-card reveal-up">
+          <div class="cert-inner">
+            <div class="cert-front glass-card">
+              <div class="cert-logo">💡</div>
+              <h3 class="cert-title">Digital 101</h3>
+              <p class="cert-issuer">Digital Skills Platform</p>
+              <p class="cert-date">2024</p>
+            </div>
+            <div class="cert-back glass-card">
+              <h4>Skills Covered</h4>
+              <ul>
+                <li>Digital Fundamentals</li>
+                <li>Logic Gates</li>
+                <li>Digital Systems</li>
+              </ul>
+              <a href="Certificates/digital_101_CERT.pdf" target="_blank" class="cert-verify-btn">📄 View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 12 -->
+        <div class="cert-flip-card reveal-up">
+          <div class="cert-inner">
+            <div class="cert-front glass-card">
+              <div class="cert-logo">🏅</div>
+              <h3 class="cert-title">Appreciation Certificate</h3>
+              <p class="cert-issuer">Institution / Event</p>
+              <p class="cert-date">2024</p>
+            </div>
+            <div class="cert-back glass-card">
+              <h4>Achievement</h4>
+              <ul>
+                <li>Outstanding Performance</li>
+                <li>Technical Excellence</li>
+                <li>Innovation & Creativity</li>
+              </ul>
+              <a href="Certificates/APPRECIATE_CERT.pdf" target="_blank" class="cert-verify-btn">📄 View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certs Gallery Section -->
+      <div class="cert-gallery-section">
+        <h3 class="gallery-title">📁 Certificate Gallery</h3>
+        <p class="gallery-subtitle">All certificates available as downloadable PDFs</p>
+        <div class="cert-gallery-grid">
+          <a href="Certificates/EDA_WORKSHOP_CERT.pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">⚙️</span>
+            <span class="cgi-name">EDA Workshop</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/iot_ESP32..pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">📡</span>
+            <span class="cgi-name">IoT ESP32</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/NPTEL_CERT..pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">🎓</span>
+            <span class="cgi-name">NPTEL</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/CERT_VLSI.pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">🔬</span>
+            <span class="cgi-name">VLSI Design</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/Ardino React_CERT.pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">🌐</span>
+            <span class="cgi-name">Arduino & React</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/CERT_DATA VISU.pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">📊</span>
+            <span class="cgi-name">Data Visualization</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/CERT_PYTHON-LIST.pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">🐍</span>
+            <span class="cgi-name">Python Lists</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/CERT_PYTHON-PROGpdf.pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">💻</span>
+            <span class="cgi-name">Python Programming</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/CERT_INDEX&QUARY.pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">🗄️</span>
+            <span class="cgi-name">Index & Query</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/CERT_INT-ALG.pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">🔢</span>
+            <span class="cgi-name">Algorithms</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/CERT_QR-CODE.pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">📱</span>
+            <span class="cgi-name">QR Code</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/digital_101_CERT.pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">💡</span>
+            <span class="cgi-name">Digital 101</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/digital_pro_CERT..pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">⚡</span>
+            <span class="cgi-name">Digital Pro</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/TAMILSELVAN_B_276184.pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">🏆</span>
+            <span class="cgi-name">Achievement</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+          <a href="Certificates/APPRECIATE_CERT.pdf" target="_blank" class="cert-gallery-item glass-card">
+            <span class="cgi-icon">🏅</span>
+            <span class="cgi-name">Appreciation</span>
+            <span class="cgi-dl">↗ Open</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats Banner -->
+      <div class="cert-stats-banner glass-card reveal-up">
+        <div class="cstat">
+          <span class="cstat-num">15+</span>
+          <span class="cstat-label">Certifications Earned</span>
+        </div>
+        <div class="cstat-divider"></div>
+        <div class="cstat">
+          <span class="cstat-num">5+</span>
+          <span class="cstat-label">Platforms</span>
+        </div>
+        <div class="cstat-divider"></div>
+        <div class="cstat">
+          <span class="cstat-num">2+</span>
+          <span class="cstat-label">Years of Learning</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-line"></div>
+        <h2 class="section-title gradient-text">Projects</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-bento">
+        <!-- Project 1 (Featured - Row 1) -->
+        <div class="project-card featured glass-card reveal-up" id="proj-footstep" onclick="openModal('footstep')">
+          <div class="proj-overlay">
+            <div class="proj-tags">
+              <span class="proj-tag">Arduino</span>
+              <span class="proj-tag">Piezoelectric</span>
+              <span class="proj-tag">Power Electronics</span>
+              <span class="proj-tag">LCD Display</span>
+            </div>
+            <div class="proj-actions">
+              <button class="proj-btn">View Details</button>
+              <a href="https://github.com/Tamil01-star" target="_blank" class="proj-gh-btn" onclick="event.stopPropagation()">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="proj-content">
+            <div class="proj-status completed">✅ Completed</div>
+            <div class="proj-emoji">⚡</div>
+            <h3 class="proj-name">Footstep Power Generator System</h3>
+            <p class="proj-desc">A green energy system converting mechanical footsteps into electricity using piezoelectric sensors, step tracking, and voltage step-up components.</p>
+            <div class="proj-tech-row">
+              <span>🤖 Arduino</span>
+              <span>🔋 Boost Converter</span>
+              <span>🖥 LCD Display</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 (Normal - Row 1) -->
+        <div class="project-card glass-card reveal-up" id="proj-notes" onclick="openModal('notes')">
+          <div class="proj-overlay">
+            <div class="proj-tags">
+              <span class="proj-tag">HTML/CSS</span>
+              <span class="proj-tag">JavaScript</span>
+              <span class="proj-tag">Student App</span>
+            </div>
+            <div class="proj-actions">
+              <button class="proj-btn">View Details</button>
+              <a href="https://github.com/Tamil01-star" target="_blank" class="proj-gh-btn" onclick="event.stopPropagation()">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="proj-content">
+            <div class="proj-status completed">✅ Completed</div>
+            <div class="proj-emoji">📝</div>
+            <h3 class="proj-name">Student Notes Management System</h3>
+            <p class="proj-desc">A portal designed for students to organize notes, subjects, and study reminders efficiently.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 (Normal - Row 2) -->
+        <div class="project-card glass-card reveal-up" id="proj-restricted" onclick="openModal('restricted')">
+          <div class="proj-overlay">
+            <div class="proj-tags">
+              <span class="proj-tag">Sensors</span>
+              <span class="proj-tag">Embedded C</span>
+              <span class="proj-tag">Industrial Safety</span>
+            </div>
+            <div class="proj-actions">
+              <button class="proj-btn">View Details</button>
+            </div>
+          </div>
+          <div class="proj-content">
+            <div class="proj-status completed">✅ Completed</div>
+            <div class="proj-emoji">🚨</div>
+            <h3 class="proj-name">Restricted Area Protection System</h3>
+            <p class="proj-desc">Safety monitoring system for industries that guards dangerous/restricted zones using sensors and alarms.</p>
+          </div>
+        </div>
+
+        <!-- Project 4 (Featured - Row 2) -->
+        <div class="project-card featured glass-card reveal-up" id="proj-attendance" onclick="openModal('attendance')">
+          <div class="proj-overlay">
+            <div class="proj-tags">
+              <span class="proj-tag">ESP32</span>
+              <span class="proj-tag">RFID RC522</span>
+              <span class="proj-tag">IoT Cloud</span>
+              <span class="proj-tag">OLED Screen</span>
+            </div>
+            <div class="proj-actions">
+              <button class="proj-btn">View Details</button>
+              <a href="https://github.com/Tamil01-star" target="_blank" class="proj-gh-btn" onclick="event.stopPropagation()">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="proj-content">
+            <div class="proj-status completed">🏆 Contribution Project</div>
+            <div class="proj-emoji">📡</div>
+            <h3 class="proj-name">Smart RFID & IoT Attendance System</h3>
+            <p class="proj-desc">Contactless RFID tracking system that logs student/employee attendance, updates Google Sheets in real-time, and provides OLED status displays.</p>
+            <div class="proj-tech-row">
+              <span>📟 ESP32 WiFi</span>
+              <span>🏷️ RFID RC522</span>
+              <span>☁️ Cloud Logging</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal-box glass-card" id="modalBox" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="section contact-section">
+    <div class="section-bg-mesh"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-line"></div>
+        <h2 class="section-title gradient-text">Let's Connect</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="contact-info reveal-left">
+          <h3 class="contact-heading">Let's Connect 🤝</h3>
+          <p class="contact-sub">I'm always open to new opportunities, collaborations, and conversations.</p>
+
+          <div class="contact-cards">
+            <a href="mailto:mr2007tamilselvan@gmail.com" class="contact-card glass-card" id="emailContactCard">
+              <span class="cc-icon">📧</span>
+              <div>
+                <div class="cc-label">Email</div>
+                <div class="cc-value">mr2007tamilselvan@gmail.com</div>
+              </div>
+            </a>
+            <a href="tel:+919080985249" class="contact-card glass-card" id="phoneContactCard">
+              <span class="cc-icon">📱</span>
+              <div>
+                <div class="cc-label">Phone</div>
+                <div class="cc-value">+91 9080985249</div>
+              </div>
+            </a>
+            <div class="contact-card glass-card">
+              <span class="cc-icon">📍</span>
+              <div>
+                <div class="cc-label">Location</div>
+                <div class="cc-value">Tiruchengode, Salem, Tamil Nadu, India</div>
+              </div>
+            </div>
+            <a href="https://www.linkedin.com/in/tamilselvan-b-b1173733a" target="_blank" class="contact-card glass-card" id="linkedinContactCard">
+              <span class="cc-icon">💼</span>
+              <div>
+                <div class="cc-label">LinkedIn</div>
+                <div class="cc-value">tamilselvan-b</div>
+              </div>
+            </a>
+            <a href="https://github.com/Tamil01-star" target="_blank" class="contact-card glass-card" id="githubContactCard">
+              <span class="cc-icon">🐙</span>
+              <div>
+                <div class="cc-label">GitHub</div>
+                <div class="cc-value">Tamil01-star</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="availability-badge glass-card">
+            🟢 Available for Internships & Freelance Projects
+          </div>
+          <p class="response-time">⏱ I typically respond within 24 hours</p>
+
+          <!-- Resume Download -->
+          <a href="Resume.pdf" target="_blank" class="resume-download-btn" id="resumeDownloadBtn">
+            📄 View Resume (PDF)
+          </a>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form glass-card" id="contactForm">
+            <div class="form-group">
+              <input type="text" id="formName" placeholder=" " required />
+              <label for="formName">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="formEmail" placeholder=" " required />
+              <label for="formEmail">Your Email</label>
+            </div>
+            <div class="form-group">
+              <select id="formSubject">
+                <option value="">Select Subject</option>
+                <option>Internship Inquiry</option>
+                <option>Project Collaboration</option>
+                <option>General Question</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea id="formMessage" placeholder=" " rows="5" required></textarea>
+              <label for="formMessage">Your Message</label>
+            </div>
+            <button type="submit" class="form-submit-btn" id="formSubmitBtn">
+              <span id="btnText">Send Message 🚀</span>
+              <div class="btn-spinner" id="btnSpinner" style="display:none"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Social Row -->
+      <div class="social-row reveal-up">
+        <a href="https://github.com/Tamil01-star" target="_blank" class="social-sq-btn" title="GitHub" id="githubSqBtn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span class="sq-tooltip">Tamil01-star</span>
+        </a>
+        <a href="https://www.linkedin.com/in/tamilselvan-b-b1173733a" target="_blank" class="social-sq-btn" title="LinkedIn" id="linkedinSqBtn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span class="sq-tooltip">tamilselvan-b</span>
+        </a>
+        <a href="mailto:mr2007tamilselvan@gmail.com" class="social-sq-btn" title="Email" id="emailSqBtn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          <span class="sq-tooltip">mr2007tamilselvan</span>
+        </a>
+        <a href="tel:+919080985249" class="social-sq-btn" title="Phone" id="phoneSqBtn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span class="sq-tooltip">+91 9080985249</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-gradient-line"></div>
+    <div class="container footer-content">
+      <div class="footer-name gradient-text">TAMILSELVAN B</div>
+      <p class="footer-tagline">Designed & Developed with ❤️ + ☕ in Salem, India</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">© 2025 Tamilselvan B. All rights reserved.</p>
+    </div>
+    <button class="back-to-top" id="backToTop" title="Back to top">↑</button>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
