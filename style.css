@@ -610,7 +610,7 @@ a {
 .orbit-container {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 360px;
   aspect-ratio: 4/5;
   display: flex;
   align-items: center;
