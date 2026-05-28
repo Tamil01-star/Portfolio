@@ -523,9 +523,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Close modal with Escape key
+  // Close project modal with Escape key
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
+  });
+
+  // ==========================================================================
+  // CERTIFICATE IMAGE MODAL
+  // ==========================================================================
+  window.openCertModal = (imgSrc, title, pdfSrc) => {
+    const overlay = document.getElementById('certModalOverlay');
+    const titleEl = document.getElementById('certModalTitle');
+    const imgEl = document.getElementById('certModalImg');
+    const dlEl = document.getElementById('certModalDl');
+    
+    if (!overlay) return;
+    
+    if (titleEl) titleEl.textContent = title;
+    if (imgEl) imgEl.src = imgSrc;
+    if (dlEl && pdfSrc) {
+      dlEl.href = pdfSrc;
+      dlEl.style.display = 'inline-block';
+    } else if (dlEl) {
+      dlEl.style.display = 'none';
+    }
+    
+    overlay.classList.add('active');
+  };
+
+  window.closeCertModal = () => {
+    const overlay = document.getElementById('certModalOverlay');
+    if (overlay) overlay.classList.remove('active');
+  };
+
+  // Close certificate modal with Escape key
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeCertModal();
   });
 
   // ==========================================================================
