@@ -63,13 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     introVideo.onended = hideScreen;
 
+    // Slow down video to 0.6x for a longer, more cinematic intro
+    introVideo.playbackRate = 0.6;
+
     introVideo.play().catch(e => {
       console.warn("Autoplay blocked or video failed to load", e);
       hideScreen();
     });
 
-    // Fallback timeout in case the video stalls
-    setTimeout(hideScreen, 12000);
+    // Fallback timeout (extended for slowed video)
+    setTimeout(hideScreen, 20000);
   } else if (loadingScreen) {
     loadingScreen.style.opacity = '0';
     loadingScreen.style.visibility = 'hidden';
