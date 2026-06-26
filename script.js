@@ -466,7 +466,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "LocalStorage integration to preserve student custom notes and reminders offline."
       ],
       duration: "Duration: 1.5 Months | Personal Project",
-      github: "https://github.com/Tamil01-star"
+      github: "https://github.com/Tamil01-star",
+      live: "https://engineering-notes-library-85mv-km7tbdj61-tamil01-stars-projects.vercel.app/"
     },
     restricted: {
       title: "Restricted Area Protection System in Industries & Factories",
@@ -510,8 +511,9 @@ document.addEventListener('DOMContentLoaded', () => {
       <ul class="modal-list">
         ${detail.features.map(f => `<li>${f}</li>`).join('')}
       </ul>
-      <div class="modal-footer">
+      <div class="modal-footer" style="display:flex; gap:10px;">
         <a href="${detail.github}" target="_blank" class="proj-gh-btn">GitHub Repository ↗</a>
+        ${detail.live ? `<a href="${detail.live}" target="_blank" class="proj-gh-btn" style="background:var(--primary-color); color:var(--bg-dark); border:none;">Live Demo ↗</a>` : ''}
       </div>
     `;
     modalOverlay.classList.add('active');
