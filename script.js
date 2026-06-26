@@ -48,26 +48,34 @@ document.addEventListener('DOMContentLoaded', () => {
   // SIMULATED LOADING SCREEN
   // ==========================================================================
   const loadingScreen = document.getElementById('loadingScreen');
-  const loadingBar = document.getElementById('loadingBar');
+  const introVideo = document.getElementById('introVideo');
 
-  if (loadingScreen && loadingBar) {
-    let progress = 0;
-    const interval = setInterval(() => {
-      progress += Math.random() * 15;
-      if (progress >= 100) {
-        progress = 100;
-        clearInterval(interval);
-        setTimeout(() => {
-          loadingScreen.style.opacity = '0';
-          loadingScreen.style.visibility = 'hidden';
-          // Trigger animations of first section
-          document.body.classList.add('loaded');
-          startTypewriter();
-          animateCounters();
-        }, 300);
-      }
-      loadingBar.style.width = `${progress}%`;
-    }, 100);
+  if (loadingScreen && introVideo) {
+    const hideScreen = () => {
+      if (loadingScreen.style.opacity === '0') return;
+      loadingScreen.style.opacity = '0';
+      loadingScreen.style.visibility = 'hidden';
+      // Trigger animations of first section
+      document.body.classList.add('loaded');
+      startTypewriter();
+      animateCounters();
+    };
+
+    introVideo.onended = hideScreen;
+
+    introVideo.play().catch(e => {
+      console.warn("Autoplay blocked or video failed to load", e);
+      hideScreen();
+    });
+
+    // Fallback timeout in case the video stalls
+    setTimeout(hideScreen, 12000);
+  } else if (loadingScreen) {
+    loadingScreen.style.opacity = '0';
+    loadingScreen.style.visibility = 'hidden';
+    document.body.classList.add('loaded');
+    startTypewriter();
+    animateCounters();
   }
 
   // ==========================================================================
