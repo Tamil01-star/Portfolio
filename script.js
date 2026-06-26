@@ -453,7 +453,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Displays real-time footstep statistics and voltage on an LCD monitor."
       ],
       duration: "Duration: 2 Months | Team Size: 2 Members",
-      github: "https://github.com/Tamil01-star"
+      github: "https://github.com/Tamil01-star",
+      tags: ["Arduino", "Piezoelectric", "Power Electronics", "LCD Display"]
     },
     notes: {
       title: "Student Notes Management System",
@@ -467,7 +468,8 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       duration: "Duration: 1.5 Months | Personal Project",
       github: "https://github.com/Tamil01-star",
-      live: "https://engineering-notes-library-85mv-km7tbdj61-tamil01-stars-projects.vercel.app/"
+      live: "https://engineering-notes-library-85mv-km7tbdj61-tamil01-stars-projects.vercel.app/",
+      tags: ["HTML/CSS", "JavaScript", "Student App"]
     },
     restricted: {
       title: "Restricted Area Protection System in Industries & Factories",
@@ -479,8 +481,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "Designed safety interlocks to automatically stop machinery if zones are breached.",
         "Optional wireless transmitter module (RF/LoRa) to send emergency alerts to supervisor consoles."
       ],
-      duration: "Duration: 2 Months | Team Project",
-      github: "https://github.com/Tamil01-star"
+      duration: "Duration: 1.5 Months | Team Size: 3 Members",
+      github: "https://github.com/Tamil01-star",
+      tags: ["Sensors", "Embedded C", "Industrial Safety"]
     },
     attendance: {
       title: "Smart RFID & IoT Attendance System",
@@ -493,7 +496,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Includes a status OLED display showing student name and check-in confirmation."
       ],
       duration: "Duration: 1 Month | Personal Project",
-      github: "https://github.com/Tamil01-star"
+      github: "https://github.com/Tamil01-star",
+      tags: ["ESP32", "RFID RC522", "IoT Cloud", "OLED Screen"]
     }
   };
 
@@ -506,6 +510,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <span class="proj-status completed">${detail.badge}</span>
         <span style="font-size:0.85rem; color:var(--text-secondary); align-self:center;">${detail.duration}</span>
       </div>
+      ${detail.tags ? `
+      <div class="proj-tags" style="margin: 15px 0;">
+        ${detail.tags.map(t => `<span class="proj-tag">${t}</span>`).join('')}
+      </div>
+      ` : ''}
       <p class="modal-desc">${detail.desc}</p>
       <h4 class="modal-section-title">Key Features</h4>
       <ul class="modal-list">
