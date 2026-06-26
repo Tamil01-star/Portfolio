@@ -49,30 +49,46 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   const loadingScreen = document.getElementById('loadingScreen');
   const introVideo = document.getElementById('introVideo');
+  const introClickOverlay = document.getElementById('introClickOverlay');
 
   if (loadingScreen && introVideo) {
     const hideScreen = () => {
-      if (loadingScreen.style.opacity === '0') return;
+      if (loadingScreen.dataset.hidden) return;
+      loadingScreen.dataset.hidden = 'true';
       loadingScreen.style.opacity = '0';
       loadingScreen.style.visibility = 'hidden';
-      // Trigger animations of first section
       document.body.classList.add('loaded');
       startTypewriter();
       animateCounters();
     };
 
+    const startVideo = () => {
+      if (introClickOverlay) {
+        introClickOverlay.style.opacity = '0';
+        introClickOverlay.style.pointerEvents = 'none';
+      }
+      // 2x speed — finishes in under 5 seconds
+      introVideo.playbackRate = 2.0;
+      introVideo.muted = false;
+      introVideo.play().catch(e => {
+        console.warn("Could not play with sound:", e);
+        introVideo.muted = true;
+        introVideo.play().catch(() => hideScreen());
+      });
+    };
+
     introVideo.onended = hideScreen;
 
-    // Slow down video to 0.6x for a longer, more cinematic intro
-    introVideo.playbackRate = 0.6;
+    // Show click overlay — wait for user click to enable sound
+    if (introClickOverlay) {
+      introClickOverlay.addEventListener('click', startVideo);
+    }
 
-    introVideo.play().catch(e => {
-      console.warn("Autoplay blocked or video failed to load", e);
-      hideScreen();
-    });
+    // Fallback: hide after 6 seconds if user doesn't click
+    setTimeout(() => {
+      if (!loadingScreen.dataset.hidden) hideScreen();
+    }, 6000);
 
-    // Fallback timeout (extended for slowed video)
-    setTimeout(hideScreen, 20000);
   } else if (loadingScreen) {
     loadingScreen.style.opacity = '0';
     loadingScreen.style.visibility = 'hidden';
