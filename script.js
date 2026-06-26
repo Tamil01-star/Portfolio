@@ -528,6 +528,21 @@ document.addEventListener('DOMContentLoaded', () => {
       github: "https://github.com/Tamil01-star",
       live: "https://personal-vault-fawn-five.vercel.app/",
       tags: ["HTML/CSS", "JavaScript", "Security", "Web App"]
+    },
+    jarvis: {
+      title: "Jarvis AI Chatbot",
+      badge: "✅ Completed",
+      desc: "An intelligent and interactive chatbot web application leveraging AI for smart conversations and assistance.",
+      features: [
+        "Interactive conversational interface resembling the classic Jarvis persona.",
+        "Integration with AI APIs for processing natural language queries.",
+        "Voice recognition and synthesis for hands-free interactions.",
+        "Real-time fetching of dynamic data like weather and news."
+      ],
+      duration: "Duration: 1 Month | Personal Project",
+      github: "https://github.com/Tamil01-star",
+      live: "https://jarvis-ai-nine-lac.vercel.app/",
+      tags: ["HTML/CSS", "JavaScript", "AI Integration"]
     }
   };
 
