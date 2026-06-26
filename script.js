@@ -498,6 +498,21 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: "Duration: 1 Month | Personal Project",
       github: "https://github.com/Tamil01-star",
       tags: ["ESP32", "RFID RC522", "IoT Cloud", "OLED Screen"]
+    },
+    testportal: {
+      title: "Students Test Portal",
+      badge: "✅ Completed",
+      desc: "A comprehensive online testing platform designed for students to take assessments and track their scores. It provides an intuitive interface for managing online exams and quizzes.",
+      features: [
+        "Interactive dashboard for students to view upcoming and past tests.",
+        "Real-time timer and automated submission for online exams.",
+        "Detailed score tracking and performance analytics.",
+        "Secure login and authentication for student profiles."
+      ],
+      duration: "Duration: 1 Month | Personal Project",
+      github: "https://github.com/Tamil01-star",
+      live: "https://students-test-portal.vercel.app/",
+      tags: ["HTML/CSS", "JavaScript", "Student App"]
     }
   };
 
