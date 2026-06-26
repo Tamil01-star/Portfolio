@@ -513,6 +513,21 @@ document.addEventListener('DOMContentLoaded', () => {
       github: "https://github.com/Tamil01-star",
       live: "https://students-test-portal.vercel.app/",
       tags: ["HTML/CSS", "JavaScript", "Student App"]
+    },
+    vault: {
+      title: "Secured Personal Vault",
+      badge: "✅ Completed",
+      desc: "A highly secure web application for safely storing and managing sensitive personal data and credentials. Features encrypted storage and secure access protocols.",
+      features: [
+        "End-to-end encryption for all stored passwords and sensitive documents.",
+        "Secure user authentication and session management.",
+        "Intuitive interface for organizing and categorizing secure notes.",
+        "Responsive design ensuring access across devices."
+      ],
+      duration: "Duration: 1 Month | Personal Project",
+      github: "https://github.com/Tamil01-star",
+      live: "https://personal-vault-fawn-five.vercel.app/",
+      tags: ["HTML/CSS", "JavaScript", "Security", "Web App"]
     }
   };
 
