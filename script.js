@@ -84,11 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
       introClickOverlay.addEventListener('click', startVideo);
     }
 
-    // Fallback: hide after 6 seconds if user doesn't click
-    setTimeout(() => {
-      if (!loadingScreen.dataset.hidden) hideScreen();
-    }, 6000);
-
   } else if (loadingScreen) {
     loadingScreen.style.opacity = '0';
     loadingScreen.style.visibility = 'hidden';
