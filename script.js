@@ -475,7 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Displays real-time footstep statistics and voltage on an LCD monitor."
       ],
       duration: "Duration: 2 Months | Team Size: 2 Members",
-      github: "https://github.com/Tamil01-star",
+      github: "https://github.com/Tamil01-star/Footstep-power-generated-system",
       tags: ["Arduino", "Piezoelectric", "Power Electronics", "LCD Display"]
     },
     notes: {
